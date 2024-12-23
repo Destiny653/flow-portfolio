@@ -1,0 +1,162 @@
+ .ContactP{
+    position: relative;
+ }
+ .formP{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 0;
+    width: 780px;
+}
+.formSection{
+    display: flex; 
+    justify-content: center; 
+    box-sizing: border-box;
+    padding: 0 100px;
+    gap: 40px;
+    /* align-items: center; */
+}
+.formSec2{
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.formSec2 div{
+    width: 33.33%;
+    background-color: rgba(58, 165, 160, 0.247);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 8px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+.form::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background:  pink;  
+    box-shadow: 0px 0px 50px 60px pink;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: all 6s linear;
+}
+.form::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: skyblue;  
+    box-shadow: 0px 0px 50px 60px skyblue;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: all 6s linear;
+}
+.ContactP::before{
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background:  pink;  
+    box-shadow: 0px 0px 50px 60px pink;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: all 6s linear;
+}
+.ContactP::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: skyblue;  
+    box-shadow: 0px 0px 50px 60px skyblue;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: all 6s linear;
+}
+.label{
+    position: relative;
+}
+.label span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #3d3d3d;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    padding: 0 4px;
+}
+.label:hover span{
+    color: blue;
+    top: -15px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ContactP input,
+.ContactP textarea{
+    padding: 8px 25px;
+    outline: none;
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 230.5px;
+}
+.sideBar{
+    background-color: rgba(58, 165, 160, 0.247);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.name,
+.ContactP textarea{
+    width: 476px;
+}
+
+.iframeMap,
+.ContactP iframe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.formSec2 h1{
+    font-size: 16px; 
+    font-weight: 500;
+}
+.formSec2 p{
+    font-size: 12px;
+}
