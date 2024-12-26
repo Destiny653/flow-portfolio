@@ -18,7 +18,7 @@ export default function Hero() {
         </section>
         <section className={styles.heroImage}>
           <div className={`${styles.heroBg}`}></div>
-          <div className={`box-border w-[500px] ${styles.heroImgP}`}>
+          <div className={`box-borde r w-[500px] ${styles.heroImgP}`}>
             <Image src="/images/intent2.png" alt="hero" width={10000} height={10000} />
           </div>
         </section>

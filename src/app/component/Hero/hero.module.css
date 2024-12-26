@@ -161,6 +161,7 @@
 } 
 .heroBdList li h1{
   font-weight: 500;
+  color: rgb(11, 11, 172);
 }
 .heroBdList li p{ 
   font-size: 13px;
