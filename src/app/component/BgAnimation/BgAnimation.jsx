@@ -26,7 +26,7 @@ export default function BgAnimation() {
             {positions.map((pos, index) => (
                 <div
                     key={index}
-                    className={`${styles.element} ${index === 1 ? styles.red : styles.blue}`}
+                    className={`${styles.element} ${index === 1 ? styles.red : styles.blue} w-screen overflow-hidden`}
                     style={{
                         transform: `translate(${pos.x}px, ${pos.y}px)`,
                     }}
