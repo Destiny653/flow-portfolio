@@ -41,14 +41,18 @@ export default function ContactPage() {
 
     setIsLoading(true);
     try {
-      const response = await fetch(`http://127.0.0.1:5000/contacts/create`, {
+      const response = await fetch(`/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
 
       const data = await response.json();
-      if (!response.ok) throw new Error(data.message);
+      if (!response.ok){
+        alert(data.message)
+        console.log("Error message: "+data.message)
+        return;
+      };
       
       setIsSuccess(true);
       setFormData({
@@ -61,7 +65,7 @@ export default function ContactPage() {
       
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
-      console.error(error);
+      console.log(error.message);
       alert("Error: " + error.message);
     } finally {
       setIsLoading(false);
@@ -132,7 +136,7 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900 text-lg">Call Us</h3>
-                    <p className="mt-1 text-gray-600">+237 (530) 041-355</p>
+                    <p className="mt-1 text-gray-600">+237 (53) 041-355</p>
                     <p className="text-gray-500">24/7</p>
                   </div>
                 </div>
@@ -143,7 +147,7 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900 text-lg">Email Us</h3>
-                    <p className="mt-1 text-gray-600">fokundem53@gmail.com</p>
+                    <p className="mt-1 text-gray-600">fokundem653@gmail.com</p>
                     <p className="text-gray-500">We reply within 24 hours</p>
                   </div>
                 </div>
