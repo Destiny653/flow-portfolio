@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 import React from 'react';
 import { Code, Globe, Database, Smartphone, Palette, Server, Search, Gauge } from 'lucide-react';
 
@@ -49,46 +49,21 @@ export default function Services() {
   return (
     <div className="bg-white/65 px-4 py-20 w-full min-h-screen">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */} 
-
-        <div className="relative h-[500px]">
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0" />
-
-          {/* Content */}
-          <div className="relative flex items-center h-full">
-            <div className="mx-auto px-6 container">
-              <div className="max-w-3xl">
-                <div className="inline-block bg-[#9900ff] backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
-                  GET IN TOUCH
-                </div>
-                <h1 className="mb-6 font-bold text-5xl">
-                My Services
-                </h1>
-                <p className="text-xl">
-                Delivering comprehensive web development solutions with a focus on quality,
-                performance, and user experience.                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div className="right-0 bottom-0 left-0 absolute">
-            <svg
-              className="fill-current w-full h-24 text-gray-100"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <path d="M0 100 C 20 0 50 0 100 100 Z" />
-            </svg>
-          </div>
+        {/* Header Section */}
+        <div className="relative mb-16 text-center">
+          <div className="top-0 right-1/4 -z-10 absolute bg-blue-400/50 blur-3xl rounded-full w-32 h-32" />
+          <div className="top-10 left-1/4 -z-10 absolute bg-purple-400/50 blur-3xl rounded-full w-32 h-32" />
+          <h1 className="mb-6 font-bold text-5xl">My Services</h1>
+          <p className="mx-auto max-w-2xl text-gray-700 text-xl">
+            Delivering comprehensive web development solutions with a focus on quality, 
+            performance, and user experience.
+          </p>
         </div>
 
         {/* Services Grid */}
         <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <div
+            <div 
               key={index}
               className="group relative bg-white/80 shadow-lg hover:shadow-xl backdrop-blur-sm p-6 rounded-xl transition-all hover:-translate-y-1 duration-300"
             >

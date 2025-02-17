@@ -1,55 +1,174 @@
+'use client';
 import React from 'react';
-import styles from './footer.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
-import { FiYoutube } from "react-icons/fi";
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 export default function Footer() {
+  const quickLinks = [
+    { name: 'Home', href: '/' }, 
+    { name: 'Services', href: '/services' },
+    { name: 'Realisations', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const services = [
+    'Web Development',
+    'UI/UX Design',
+    'Backend Development',
+    'Database Management',
+    'API Integration',
+  ];
+
+  const recentProjects = [
+    {
+      name: 'E-Commerce Platform',
+      image: 'https://source.unsplash.com/300x200/?ecommerce',
+      href: '#'
+    },
+    {
+      name: 'Portfolio Dashboard',
+      image: 'https://source.unsplash.com/300x200/?dashboard',
+      href: '#'
+    },
+    {
+      name: 'Social Media App',
+      image: 'https://source.unsplash.com/300x200/?social-media',
+      href: '#'
+    }
+  ];
+
   return (
-    <footer className={`${styles.footer}`}>
-      <div className={`${styles.footerNav} flex items-center justify-between gap-[10%]`}>
-        <section>
-          <h1 className={`text-[20px] font-[500]`}>Contact Us</h1>
-          <p> 
-            Douala Cameroon<br />
-            Phone: (+237) 530-412-55<br />
-            Email: <Link href="mailto:fokundem.com@gmail.com">fokundem.com@gmail.com</Link>
-          </p>
-        </section>
-        <ul className={`flex flex-col gap-[10px] font-[400]`}>
-          <h1 className={`text-[20px] font-[500]`}>Policies</h1>
-          <li><Link href="#">Privacy Policy</Link></li>
-          <li><Link href="#">Terms of Service</Link></li>
-        </ul>
-        <ul className={`flex flex-col gap-[15px]`}>
-        <div className='flex justify-center items-center gap-[6px] h-[50px]'>
-          <Image className='w-[50px] h-auto' src={'/images/logo.png'} alt='logo' width={500} height={500} />
-          <h1 className={`text-[20px] font-[500]`}>Flow Web Service</h1>
-        </div> 
-          <div className={`${styles.footerItems} grid grid-cols-2 flex-col gap-[15px] font-[400]`}>
-            <li>
-              <FaFacebookF className='text-[#1b1b8d]' />
-              Facebook
-            </li>
-            <li>
-              <FiYoutube className='text-[red]' />
-              Youtube
-            </li>
-            <li>
-              <FaLinkedinIn className='text-[#1b1b8d]' />
-              Linked In
-            </li>
-            <li>
-              <FaTiktok />
-              Tik Tok
-            </li>
+    <footer className="relative bg-white/80 backdrop-blur-md pt-16 pb-8 w-full overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="top-0 right-0 -z-10 absolute bg-blue-300/30 blur-3xl rounded-full w-64 h-64" />
+      <div className="bottom-0 left-0 -z-10 absolute bg-purple-300/30 blur-3xl rounded-full w-64 h-64" />
+      
+      <div className="mx-auto px-4 max-w-7xl">
+        <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
+          {/* About Section */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2 mb-4">
+              <Image
+                src="https://source.unsplash.com/100x100/?logo"
+                alt="Logo"
+                width={50}
+                height={50}
+                className="rounded-lg"
+              />
+              <h3 className="font-bold text-xl">Mbahmukong Destiny</h3>
+            </div>
+            <p className="text-gray-600">
+              Transforming ideas into exceptional digital experiences through innovative web development solutions.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#" className="hover:text-blue-600 transition-colors">
+                <Github className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="hover:text-blue-600 transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="hover:text-blue-600 transition-colors">
+                <Facebook className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="hover:text-blue-600 transition-colors">
+                <Youtube className="w-6 h-6" />
+              </Link>
+            </div>
           </div>
-        </ul>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="mb-4 font-semibold text-lg">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-600 hover:text-blue-600 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="mb-4 font-semibold text-lg">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service, index) => (
+                <li key={index} className="text-gray-600">
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Recent Projects */}
+          <div>
+            <h3 className="mb-4 font-semibold text-lg">Recent Projects</h3>
+            <div className="space-y-4">
+              {recentProjects.map((project, index) => (
+                <Link href={project.href} key={index}>
+                  <div className="group flex items-center gap-3">
+                    <div className="relative rounded-lg w-16 h-16 overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <span className="group-hover:text-blue-600 text-gray-600 transition-colors">
+                      {project.name}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Bar */}
+        <div className="flex flex-wrap justify-between items-center py-6 border-gray-200 border-t">
+          <div className="flex flex-wrap gap-6">
+            <a href="mailto:contact@example.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+              <Mail className="w-5 h-5" />
+              fokundem653@gmail.com
+            </a>
+            <a href="tel:+1234567890" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+              <Phone className="w-5 h-5" />
+              +237 (530) 041-355
+            </a>
+            <span className="flex items-center gap-2 text-gray-600">
+              <MapPin className="w-5 h-5" />
+              Bamenda, Cameroon
+            </span>
+          </div>
+
+          {/* Newsletter */}
+          <div className="flex items-center gap-2 mt-4 lg:mt-0">
+            <input
+              type="email"
+              placeholder="Subscribe to newsletter"
+              className="bg-white/50 px-4 py-2 border border-gray-200 focus:border-blue-500 rounded-lg focus:outline-none"
+            />
+            <button className="bg-blue-600 hover:bg-blue-700 p-2 rounded-lg text-white transition-colors">
+              <Send className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="pt-8 border-gray-200 border-t text-center">
+          <p className="text-gray-600">
+            © {new Date().getFullYear()} Mbahmukong Destiny. All rights reserved.
+          </p>
+        </div>
       </div>
-      <p className='text-left'>&copy; 2024 flow web service. All rights reserved.</p>
     </footer>
-  )
+  );
 }

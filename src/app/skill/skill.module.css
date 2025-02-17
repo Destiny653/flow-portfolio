@@ -1,7 +1,0 @@
-.bright{
-    width: 400px;
-    height: 200px;
-    margin: 50px;
-    background-color: rgba(255, 68, 0, 0.781);
-    clip-path: polygon(0% 10%, 80% 20%, 100% 100%, 10% 100%, 30% 20%, 1050% 100%);  
-}
