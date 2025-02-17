@@ -49,7 +49,7 @@ export default function Services() {
   return (
     <div className="bg-white/65 px-4 py-20 w-full min-h-screen">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */} 
+        {/* Header Section */}
 
         <div className="relative h-[500px]">
 
@@ -63,12 +63,12 @@ export default function Services() {
                 <div className="inline-block bg-[#9900ff] backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
                   GET IN TOUCH
                 </div>
-                <h1 className="mb-6 font-bold text-5xl">
-                My Services
+                <h1 className="drop-shadow-lg mb-6 font-extrabold text-white text-6xl">
+                  My Services
                 </h1>
-                <p className="text-xl">
-                Delivering comprehensive web development solutions with a focus on quality,
-                performance, and user experience.                </p>
+                <p className="text-gray-700 text-xl">
+                  Delivering comprehensive web development solutions with a focus on quality,
+                  performance, and user experience.</p>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { ExternalLink, Github } from 'lucide-react';
@@ -8,50 +8,74 @@ export default function Projects() {
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with real-time inventory management and secure payment integration.",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Next.js", "Node.js", "MongoDB", "Payunit", "Express"],
+      imageUrl: "/images/bliss.png",
+      liveUrl: "https://babyblissl.vercel.app",
+      githubUrl: "https://github.com/Destiny653/babybliss.git",
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with real-time data visualization.",
-      technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "E-commerce Application",
+      description: "A complete full-stack e-commerce liquor store with full Api intergration, fully functional.",
+      technologies: ["Next.js", "Google Auth", "MongoDB", "Crypto"],
+      imageUrl: "/images/liquor.png",
+      liveUrl: "https://liquorluxx.vercel.app/",
+      githubUrl: "https://github.com/Destiny653/Liquor.git",
     },
     {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses and multi-language support.",
-      technologies: ["React", "Python", "TensorFlow", "WebSocket"],
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Api Intergrated Image Gellery",
+      description: "Real-time pixaby images Api intergrated with limitless lively images including anims.",
+      technologies: ["React", "Tailwind CSS", "WebSocket"],
+      imageUrl: "/images/gallery.png",
+      liveUrl: "https://gallerylive.vercel.app/",
+      githubUrl: "https://github.com/Destiny653/Gallery.git",
     },
     {
       title: "Portfolio Website",
       description: "Modern portfolio website with dynamic content management and animations.",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
+      imageUrl: "/images/portfolio.png",
+      liveUrl: "https://portfolioemo.vercel.app/",
+      githubUrl: "https://github.com/Destiny653/flow-portfolio.git",
     },
     {
-      title: "Task Management App",
+      title: "Restaurant Management",
       description: "Collaborative task management platform with real-time updates and team features.",
-      technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Next.js", "MongoDB", "Express", "Tailwind CSS"],
+      imageUrl: "/images/restaurant.png",
+      liveUrl: "https://restaurantemo.vercel.app/",
+      githubUrl: "https://github.com/Destiny653/restaurant-mgt.git",
+    },
+    {
+      title: "E-commerce Application",
+      description: "An e-commerce grocery store for managing and boosting sales both online and locally.",
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
+      imageUrl: "/images/emo.png",
+      liveUrl: "https://emoecommerce.vercel.app",
+      githubUrl: "https://github.com/Destiny653/project-level2.git",
+    },
+    {
+      title: "A simple CSS animation",
+      description: "An e-commerce detail animation card.",
+      technologies: ["HTML", "JavaScript", "CSS"],
+      imageUrl: "/images/shoe.png",
+      liveUrl: "https://destiny653.github.io/JSshoe-Animation/",
+      githubUrl: "https://github.com/Destiny653/JSshoe-Animation.git",
     },
     {
       title: "Weather Application",
       description: "Weather forecast application with interactive maps and location-based services.",
       technologies: ["React Native", "OpenWeather API", "Maps"],
-      imageUrl: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=800&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      imageUrl: "/images/weather.png",
+      liveUrl: "https://destiny653.github.io/Weather-card-anim/",
+      githubUrl: "https://github.com/Destiny653/Weather-card-anim.git",
+    },
+    {
+      title: "Domain.com",
+      description: "An HTML CSS domain .com web practice, first project execution.",
+      technologies: ["HTML", "JavaScript", "CSS"],
+      imageUrl: "/images/domain.png",
+      liveUrl: "https://destiny653.github.io/Domain.com/",
+      githubUrl: "https://github.com/Destiny653/Domain.com.git",
     },
   ];
 
@@ -60,19 +84,26 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="relative flex flex-col justify-center items-center mb-16 h-[400px] text-center">
-          <div className="top-0 right-1/4 -z-10 absolute bg-purple-400/50 blur-3xl rounded-full w-32 h-32" />
-          <div className="top-10 left-1/4 -z-10 absolute bg-yellow-400/50 blur-3xl rounded-full w-32 h-32" />
-          <h1 className="mb-6 font-bold text-5xl">My Projects</h1>
-          <p className="mx-auto max-w-2xl text-gray-700 text-xl">
+          {/* Soft Gradient Background Blurs */}
+          <div className="-z-10 absolute inset-0 bg-gradient-to-r from-purple-400/40 via-pink-300/40 to-yellow-300/40 opacity-70 blur-3xl rounded-3xl" />
+
+          <div className="top-0 right-1/4 -z-10 absolute bg-purple-500/40 blur-[120px] rounded-full w-40 h-40" />
+          <div className="top-10 left-1/4 -z-10 absolute bg-yellow-500/40 blur-[120px] rounded-full w-40 h-40" />
+
+          {/* Main Content */}
+          <h1 className="drop-shadow-lg mb-6 font-extrabold text-white text-6xl">My Projects</h1>
+
+          <p className="mx-auto max-w-2xl text-gray-700 text-xl leading-relaxed">
             Showcasing my latest web development projects and applications.
             Each project represents a unique challenge and solution.
           </p>
         </div>
 
+
         {/* Projects Grid - Modified to 3 columns */}
         <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="group bg-white/80 shadow-lg hover:shadow-xl backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300"
             >
@@ -90,7 +121,7 @@ export default function Projects() {
                 <p className="mb-4 text-gray-600 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, i) => (
-                    <span 
+                    <span
                       key={i}
                       className="bg-blue-100 px-3 py-1 rounded-full text-blue-600 text-xs"
                     >
@@ -99,7 +130,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a 
+                  <a
                     href={project.liveUrl}
                     className="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm"
                     target="_blank"
@@ -108,7 +139,7 @@ export default function Projects() {
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
-                  <a 
+                  <a
                     href={project.githubUrl}
                     className="flex items-center gap-2 text-gray-700 hover:text-gray-900 text-sm"
                     target="_blank"
