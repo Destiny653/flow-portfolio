@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Send, Loader2, MapPin, Phone, Mail, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
-  // ... [Previous state management code remains the same]
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -70,9 +69,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="bg-gray-50 min-h-screen">
       {/* Hero Section with Map */}
-      <div className="relative h-[500px]">
+      <div className="relative h-[60vh] md:h-[500px]">
         {/* Map Background */}
         <div className="absolute inset-0">
           <iframe 
@@ -85,71 +84,66 @@ export default function ContactPage() {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-800/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-blue-800/75" />
 
         {/* Content */}
         <div className="relative flex items-center h-full">
-          <div className="mx-auto px-6 container">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 container">
             <div className="max-w-3xl">
-              <div className="inline-block bg-white/10 backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
+              <div className="inline-block bg-white/20 backdrop-blur-lg mb-4 px-6 py-2 rounded-full font-medium text-white text-sm hover:scale-105 transition-transform duration-300 transform">
                 GET IN TOUCH
               </div>
-              <h1 className="mb-6 font-bold text-white text-5xl">
+              <h1 className="mb-6 font-bold text-white text-4xl md:text-5xl lg:text-6xl animate-fade-in">
                 Let's Start a Conversation
               </h1>
-              <p className="text-gray-200 text-xl">
+              <p className="text-gray-100 text-lg md:text-xl leading-relaxed">
                 Have a project in mind? We'd love to hear about it. Let's discuss how we can help bring your vision to life.
               </p>
             </div>
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="right-0 bottom-0 left-0 absolute">
-          <svg
-            className="fill-current w-full h-24 text-gray-100"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <path d="M0 100 C 20 0 50 0 100 100 Z" />
-          </svg>
-        </div>
       </div>
 
       {/* Contact Section */}
-      <div className="z-10 relative mx-auto -mt-20 px-6 py-16 container">
-        <div className="gap-12 grid grid-cols-1 lg:grid-cols-3">
+      <div className="relative mx-auto -mt-20 px-4 sm:px-6 lg:px-8 pb-16 container">
+        <div className="gap-8 grid grid-cols-1 lg:grid-cols-3">
           {/* Contact Information Card */}
           <div className="lg:col-span-1">
-            <div className="bg-white shadow-xl p-10 rounded-lg">
-              <h2 className="mb-8 font-semibold text-gray-900 text-3xl">
+            <div className="bg-white shadow-xl p-8 rounded-2xl hover:scale-[1.02] transition-all duration-300 transform">
+              <h2 className="mb-8 font-bold text-gray-900 text-2xl md:text-3xl">
                 Contact Information
               </h2>
               
               <div className="space-y-8">
-                <div className="flex items-start">
-                  <MapPin className="mt-1 w-8 h-8 text-gray-900" />
-                  <div className="ml-6">
-                    <h3 className="font-semibold text-gray-900 text-xl">Our Location</h3>
-                    <p className="mt-2 text-gray-600">Akwa Palace</p>
+                <div className="group flex items-start">
+                  <div className="group-hover:bg-purple-200 bg-purple-100 p-3 rounded-full transition-colors duration-300">
+                    <MapPin className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900 text-lg">Our Location</h3>
+                    <p className="mt-1 text-gray-600">Akwa Palace</p>
                     <p className="text-gray-600">Douala Cameroon</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Phone className="mt-1 w-8 h-8 text-gray-900" />
-                  <div className="ml-6">
-                    <h3 className="font-semibold text-gray-900 text-xl">Call Us</h3>
-                    <p className="mt-2 text-gray-600">+237 (530) 041-355</p>
+                <div className="group flex items-start">
+                  <div className="group-hover:bg-blue-200 bg-blue-100 p-3 rounded-full transition-colors duration-300">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900 text-lg">Call Us</h3>
+                    <p className="mt-1 text-gray-600">+237 (530) 041-355</p>
                     <p className="text-gray-500">24/7</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Mail className="mt-1 w-8 h-8 text-gray-900" />
-                  <div className="ml-6">
-                    <h3 className="font-semibold text-gray-900 text-xl">Email Us</h3>
-                    <p className="mt-2 text-gray-600">fokundem53@gmail.com</p>
+                <div className="group flex items-start">
+                  <div className="group-hover:bg-green-200 bg-green-100 p-3 rounded-full transition-colors duration-300">
+                    <Mail className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900 text-lg">Email Us</h3>
+                    <p className="mt-1 text-gray-600">fokundem53@gmail.com</p>
                     <p className="text-gray-500">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -159,84 +153,84 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-white shadow-xl p-10 rounded-lg">
-              <div className="gap-x-8 gap-y-6 grid grid-cols-1 md:grid-cols-2">
-                <div className="col-span-1">
-                  <label className="block mb-2 font-medium text-gray-900 text-lg">
+            <form onSubmit={handleSubmit} className="bg-white shadow-xl p-8 rounded-2xl">
+              <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
+                <div className="col-span-2 md:col-span-1">
+                  <label className="block mb-2 font-medium text-gray-900 text-base">
                     Full Name
                     {errors.name && (
-                      <span className="ml-2 text-red-600 text-base">({errors.name})</span>
+                      <span className="ml-2 text-red-500 text-sm">({errors.name})</span>
                     )}
                   </label>
                   <input
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="px-4 py-3 border border-gray-300 focus:border-transparent rounded-lg focus:ring-2 focus:ring-gray-900 w-full text-lg transition duration-200"
+                    className="px-4 py-3 border border-gray-300 focus:border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-200 w-full text-base transition-all duration-200"
                     placeholder="John Doe"
                   />
                 </div>
 
-                <div className="col-span-1">
-                  <label className="block mb-2 font-medium text-gray-900 text-lg">
+                <div className="col-span-2 md:col-span-1">
+                  <label className="block mb-2 font-medium text-gray-900 text-base">
                     Phone Number
                     {errors.phone && (
-                      <span className="ml-2 text-red-600 text-base">({errors.phone})</span>
+                      <span className="ml-2 text-red-500 text-sm">({errors.phone})</span>
                     )}
                   </label>
                   <input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="px-4 py-3 border border-gray-300 focus:border-transparent rounded-lg focus:ring-2 focus:ring-gray-900 w-full text-lg transition duration-200"
+                    className="px-4 py-3 border border-gray-300 focus:border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-200 w-full text-base transition-all duration-200"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
 
                 <div className="col-span-2">
-                  <label className="block mb-2 font-medium text-gray-900 text-lg">
+                  <label className="block mb-2 font-medium text-gray-900 text-base">
                     Email Address
                     {errors.email && (
-                      <span className="ml-2 text-red-600 text-base">({errors.email})</span>
+                      <span className="ml-2 text-red-500 text-sm">({errors.email})</span>
                     )}
                   </label>
                   <input
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="px-4 py-3 border border-gray-300 focus:border-transparent rounded-lg focus:ring-2 focus:ring-gray-900 w-full text-lg transition duration-200"
+                    className="px-4 py-3 border border-gray-300 focus:border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-200 w-full text-base transition-all duration-200"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 <div className="col-span-2">
-                  <label className="block mb-2 font-medium text-gray-900 text-lg">
+                  <label className="block mb-2 font-medium text-gray-900 text-base">
                     Subject
                     {errors.subject && (
-                      <span className="ml-2 text-red-600 text-base">({errors.subject})</span>
+                      <span className="ml-2 text-red-500 text-sm">({errors.subject})</span>
                     )}
                   </label>
                   <input
                     type="text"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="px-4 py-3 border border-gray-300 focus:border-transparent rounded-lg focus:ring-2 focus:ring-gray-900 w-full text-lg transition duration-200"
+                    className="px-4 py-3 border border-gray-300 focus:border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-200 w-full text-base transition-all duration-200"
                     placeholder="How can we help you?"
                   />
                 </div>
 
                 <div className="col-span-2">
-                  <label className="block mb-2 font-medium text-gray-900 text-lg">
+                  <label className="block mb-2 font-medium text-gray-900 text-base">
                     Message
                     {errors.message && (
-                      <span className="ml-2 text-red-600 text-base">({errors.message})</span>
+                      <span className="ml-2 text-red-500 text-sm">({errors.message})</span>
                     )}
                   </label>
                   <textarea
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="px-4 py-3 border border-gray-300 focus:border-transparent rounded-lg focus:ring-2 focus:ring-gray-900 w-full text-lg transition duration-200"
+                    className="px-4 py-3 border border-gray-300 focus:border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-200 w-full text-base transition-all duration-200 resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -247,11 +241,11 @@ export default function ContactPage() {
                   type="submit"
                   disabled={isLoading}
                   className={`w-full flex items-center justify-center px-8 py-4 text-lg font-medium text-white 
-                    rounded-lg transition duration-200 ${
+                    rounded-lg transition-all duration-300 transform hover:-translate-y-1 ${
                       isSuccess
                         ? 'bg-green-600 hover:bg-green-700'
-                        : 'bg-blue-900 hover:bg-blue-800'
-                    } disabled:opacity-50 disabled:cursor-not-allowed`}
+                        : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700'
+                    } disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none`}
                 >
                   {isLoading ? (
                     <>

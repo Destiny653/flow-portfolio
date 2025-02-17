@@ -1,8 +1,8 @@
 .element {
     z-index: -1;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%; 
     transition: transform 2s ease-in-out; /* Smooth transition */
   }

@@ -127,7 +127,7 @@ export default function Hero() {
       </section>
  
       {/* Goals Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-[40px] overflow-hidden">
         {/* Background Design Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-pink-50/50" />
         <div className="top-0 -right-48 absolute bg-blue-200/20 blur-3xl rounded-full w-96 h-96" />
