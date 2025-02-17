@@ -1,22 +1,23 @@
 .element {
-    z-index: -1;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%; 
-    transition: transform 2s ease-in-out; /* Smooth transition */
-  }
-  
-  .blue {
-    transition: all 10s ease;
-    background-color: rgb(0, 0, 255);
-    box-shadow: 0px 0px 50px 60px rgb(0, 0, 255);
-    z-index: -1;
-  }
-  
-  .red {
-    transition: all 10s ease;
-    background-color: rgb(255, 0, 0);
-    box-shadow: 0px 0px 50px 60px rgb(255, 0, 0);
-    z-index: -1;
-  }
+  z-index: -1;
+  position: absolute;
+  width: clamp(40px, 5vw, 70px);
+  height: clamp(40px, 5vw, 70px);
+  border-radius: 50%;
+  transition: transform 2s ease-in-out;
+  opacity: 0.7;
+}
+
+.blue {
+  transition: all 10s ease;
+  background-color: rgb(0, 0, 255);
+  box-shadow: 0 0 clamp(30px, 8vw, 50px) clamp(40px, 10vw, 60px) rgb(0, 0, 255);
+  z-index: -1;
+}
+
+.red {
+  transition: all 10s ease;
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 0 clamp(30px, 8vw, 50px) clamp(40px, 10vw, 60px) rgb(255, 0, 0);
+  z-index: -1;
+}
