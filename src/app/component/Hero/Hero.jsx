@@ -231,7 +231,7 @@ export default function Hero() {
             {[
               { icon: <Facebook className="w-6 h-6" />, href: "https://www.facebook.com/destiny.mbahmukong", color: "text-blue-600" },
               { icon: <Linkedin className="w-6 h-6" />, href: "https://www.linkedin.com/in/destiny-mbahmukong-a8a98b1b4/", color: "text-blue-700" },
-              { icon: <Github className="w-6 h-6" />, href: "https://github.com/yourusername", color: "text-gray-800" },
+              { icon: <Github className="w-6 h-6" />, href: "#", color: "text-gray-800" },
               { icon: <Youtube className="w-6 h-6" />, href: "https://www.youtube.com/channel/UC9gJ6o436p4yZ3q_h5z6-HA", color: "text-red-600" },
             ].map((social, index) => (
               <Link

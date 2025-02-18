@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Code, Globe, Database, Smartphone, Palette, Server, Search, Gauge } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Services() {
   const services = [
@@ -60,9 +61,11 @@ export default function Services() {
           <div className="relative flex items-center h-full">
             <div className="mx-auto px-6 container">
               <div className="max-w-3xl">
-                <div className="inline-block bg-[#9900ff] backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
-                  GET IN TOUCH
-                </div>
+                <Link href={'/contact'}>
+                  <div className="inline-block bg-[#9900ff] backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
+                    GET IN TOUCH
+                  </div>
+                </Link>
                 <h1 className="drop-shadow-lg mb-6 font-extrabold text-white text-6xl">
                   My Services
                 </h1>
@@ -106,9 +109,11 @@ export default function Services() {
           <div className="bottom-0 left-0 -z-10 absolute bg-blue-300/30 blur-3xl rounded-full w-64 h-64" />
           <h2 className="mb-4 font-bold text-3xl">Ready to Start Your Project?</h2>
           <p className="mb-8 text-gray-700 text-xl">Let's collaborate to bring your ideas to life!</p>
-          <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
-            Get in Touch
-          </button>
+          <Link href={'/contact'}>
+            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
+              Get in Touch
+            </button>
+          </Link>
         </div>
       </div>
     </div>

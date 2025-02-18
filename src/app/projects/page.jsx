@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ExternalLink, Github } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Projects() {
   const projects = [
@@ -11,7 +12,7 @@ export default function Projects() {
       technologies: ["Next.js", "Node.js", "MongoDB", "Payunit", "Express"],
       imageUrl: "/images/bliss.png",
       liveUrl: "https://babyblissl.vercel.app",
-      githubUrl: "https://github.com/Destiny653/babybliss.git",
+      githubUrl: "#",
     },
     {
       title: "E-commerce Application",
@@ -160,9 +161,11 @@ export default function Projects() {
           <div className="bottom-0 left-0 -z-10 absolute bg-pink-300/30 blur-3xl rounded-full w-64 h-64" />
           <h2 className="mb-4 font-bold text-3xl">Interested in Working Together?</h2>
           <p className="mb-8 text-gray-700 text-xl">I'm always open to discussing new projects and opportunities.</p>
-          <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
-            Contact Me
-          </button>
+          <Link href={'/contact'}>
+            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
+              Contact Me
+            </button>
+          </Link>
         </div>
       </div>
     </div>
