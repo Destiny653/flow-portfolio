@@ -33,7 +33,7 @@ export default function Hero() {
     },
     {
       icon: <Database className="w-8 h-8 text-yellow-500" />,
-      title: "MongoDB & Python",
+      title: "MongoDB, MyQSL & Python",
       description: "Managing databases and data manipulation with modern tools."
     },
     {
