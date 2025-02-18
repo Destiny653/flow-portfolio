@@ -50,7 +50,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <Image
-                src="https://source.unsplash.com/100x100/?logo"
+                src="/images/logo.png"
                 alt="Logo"
                 width={50}
                 height={50}

@@ -75,12 +75,16 @@ export default function Hero() {
                 Fullstack Developer transforming ideas into exceptional digital experiences
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300">
-                  Get in Touch
-                </button>
-                <button className="hover:bg-blue-50 px-8 py-4 border-2 border-blue-600 rounded-full font-semibold text-blue-600 hover:scale-105 transition-all duration-300">
-                  View Projects
-                </button>
+                <Link href={'/contact'}>
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300">
+                    Get in Touch
+                  </button>
+                </Link>
+                <Link href={'/projects'}>
+                  <button className="hover:bg-blue-50 px-8 py-4 border-2 border-blue-600 rounded-full font-semibold text-blue-600 hover:scale-105 transition-all duration-300">
+                    View Projects
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -125,7 +129,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
- 
+
       {/* Goals Section */}
       <section className="relative py-[40px] overflow-hidden">
         {/* Background Design Elements */}
