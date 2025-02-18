@@ -22,19 +22,19 @@ export default function Footer() {
 
   const recentProjects = [
     {
-      name: 'E-Commerce Platform',
-      image: 'https://source.unsplash.com/300x200/?ecommerce',
-      href: '#'
+      name: 'E-Commerce Application',
+      image: '/images/liquor.png',
+      href: 'https://liquorluxx.vercel.app'
     },
     {
-      name: 'Portfolio Dashboard',
-      image: 'https://source.unsplash.com/300x200/?dashboard',
-      href: '#'
+      name: 'Restaurant Management',
+      image: '/images/restaurant.png',
+      href: 'https://restaurantemo.vercel.app/'
     },
     {
-      name: 'Social Media App',
-      image: 'https://source.unsplash.com/300x200/?social-media',
-      href: '#'
+      name: 'E-commerce Application',
+      image: '/images/bliss.png',
+      href: 'https://babyblissl.vercel.app/'
     }
   ];
 
