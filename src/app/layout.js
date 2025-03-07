@@ -22,8 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <Head>
+    <html lang="en"> 
       <Head>
         <title>Welcome to My Full Stack Web Development Site</title>
         <meta name="description" content="A place where you can explore greate content and order for a website." />
@@ -32,8 +31,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content="A place where you can explore great content and order for a website." /> 
         <meta name="google-site-verification" content="9hoog_2YA3jhBSHjhIE0VdmBaRZPsMrirWRT7DOaPHY" />
       </Head>
-        <title>Portfolio</title>
-      </Head>
+        <title>Portfolio</title> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
