@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";
 import BgAnimation from "./component/BgAnimation/BgAnimation";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+      <Head>
+        <title>Welcome to My Full Stack Web Development Site</title>
+        <meta name="description" content="A place where you can explore greate content and order for a website." />
+        <meta name="keywords" content="full stack web development, JavaScript, Node.js, React, Next.js, order for a website" />
+        <meta property="og:title" content="Welcome to My Full Stack Web Development Site" />
+        <meta property="og:description" content="A place where you can explore great content and order for a website." /> 
+        <meta name="google-site-verification" content="9hoog_2YA3jhBSHjhIE0VdmBaRZPsMrirWRT7DOaPHY" />
+      </Head>
+        <title>Portfolio</title>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
