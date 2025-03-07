@@ -51,7 +51,7 @@ export default function Projects() {
       description: "An e-commerce grocery store for managing and boosting sales both online and locally.",
       technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
       imageUrl: "/images/emo.png",
-      liveUrl: "https://emoecommerce.vercel.app",
+      liveUrl: "https://emocommerce.vercel.app",
       githubUrl: "https://github.com/Destiny653/project-level2.git",
     },
     {
