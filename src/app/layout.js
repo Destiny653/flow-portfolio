@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Welcome to My Full Stack Web Development Site",
   description: "A place where you can explore great content and order a website.",
+  other: {
+    "google-site-verification": "your-google-verification-code",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -51,6 +54,7 @@ export default function RootLayout({ children }) {
           `}
         </script>
         <meta name="google-site-verification" content="9hoog_2YA3jhBSHjhIE0VdmBaRZPsMrirWRT7DOaPHY" />
+        <meta name="google-site-verification" content="your-google-verification-code" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <BgAnimation />
