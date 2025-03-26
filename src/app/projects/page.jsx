@@ -25,19 +25,11 @@ export default function Projects() {
     {
       title: "Api Intergrated Image Gellery",
       description: "Real-time pixaby images Api intergrated with limitless lively images including anims.",
-      technologies: ["React", "Tailwind CSS", "WebSocket"],
+      technologies: ["React", "Tailwind CSS"],
       imageUrl: "/images/gallery.png",
       liveUrl: "https://gallerylive.vercel.app/",
       githubUrl: "https://github.com/Destiny653/Gallery.git",
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern portfolio website with dynamic content management and animations.",
-      technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
-      imageUrl: "/images/portfolio.png",
-      liveUrl: "https://portfolioemo.vercel.app/",
-      githubUrl: "https://github.com/Destiny653/flow-portfolio.git",
-    },
+    }, 
     {
       title: "Restaurant Management",
       description: "Collaborative task management platform with real-time updates and team features.",
@@ -77,7 +69,16 @@ export default function Projects() {
       imageUrl: "/images/domain.png",
       liveUrl: "https://destiny653.github.io/Domain.com/",
       githubUrl: "https://github.com/Destiny653/Domain.com.git",
+    }, 
+    {
+      title: "Custom Dashboard",
+      description: "A custom dashboard with both UI/UX interface and interactive features.",
+      technologies: ["React", "dummyJSON", "Tailwind CSS", "Vite", "Shadcn"],
+      imageUrl: "/images/dashboard.png",
+      liveUrl: "https://cfactorexi.vercel.app/#/login",
+      githubUrl: "https://github.com/Destiny653/cfactorexi.git",
     },
+
   ];
 
   return (
