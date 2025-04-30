@@ -73,7 +73,7 @@ export default function Projects() {
     {
       title: "Custom Dashboard",
       description: "A custom dashboard with both UI/UX interface and interactive features.",
-      technologies: ["React", "dummyJSON", "Tailwind CSS", "Vite", "Shadcn"],
+      technologies: ["React", "NestJs", "Tailwind CSS", "Vite", "Shadcn", "Tanstack Query", "MongoDB"],
       imageUrl: "/images/dashboard.png",
       liveUrl: "https://cfactorexi.vercel.app/#/login",
       githubUrl: "https://github.com/Destiny653/cfactorexi.git",
