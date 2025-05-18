@@ -2,6 +2,7 @@
 import React from 'react';
 import { Code, Globe, Database, Smartphone, Palette, Server, Search, Gauge } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Services() {
   const services = [
@@ -50,41 +51,44 @@ export default function Services() {
   return (
     <div className="bg-white/65 px-4 py-20 w-full min-h-screen">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */}
-
-        <div className="relative h-[500px]">
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0" />
-
-          {/* Content */}
-          <div className="relative flex items-center h-full">
-            <div className="mx-auto px-6 container">
-              <div className="max-w-3xl">
-                <Link href={'/contact'}>
-                  <div className="inline-block bg-[#9900ff] backdrop-blur-sm mb-4 px-4 py-2 rounded-full font-medium text-white text-sm">
-                    GET IN TOUCH
-                  </div>
-                </Link>
-                <h1 className="drop-shadow-lg mb-6 font-extrabold text-white text-6xl">
-                  My Services
-                </h1>
-                <p className="text-gray-700 text-xl">
-                  Delivering comprehensive web development solutions with a focus on quality,
-                  performance, and user experience.</p>
-              </div>
-            </div>
+        {/* Enhanced Hero Section */}
+        <div className="relative isolate overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-900 rounded-3xl mb-16 h-[500px] flex flex-col justify-center items-center text-center">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
           </div>
-
-          {/* Decorative Elements */}
-          <div className="right-0 bottom-0 left-0 absolute">
-            <svg
-              className="fill-current w-full h-24 text-gray-100"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <path d="M0 100 C 20 0 50 0 100 100 Z" />
-            </svg>
+          
+          {/* Floating elements */}
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
+          
+          {/* Content container */}
+          <div className="relative z-10 px-6">
+            {/* Your logo */}
+            <div className="mx-auto mb-8 w-32 h-32 relative">
+              <Image 
+                src="/images/logo.png" 
+                alt="Your Logo" 
+                fill 
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            <Link href="/contact">
+              <span className="inline-block bg-indigo-500 hover:bg-indigo-600 mb-6 px-6 py-2 rounded-full font-medium text-white text-sm transition-colors duration-300">
+                GET IN TOUCH
+              </span>
+            </Link>
+            
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+              My <span className="text-purple-300">Services</span>
+            </h1>
+            
+            <p className="mx-auto max-w-2xl text-lg text-purple-100 leading-relaxed">
+              Delivering comprehensive web development solutions with a focus on quality,
+              performance, and exceptional user experiences.
+            </p>
           </div>
         </div>
 
@@ -93,27 +97,45 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white/80 shadow-lg hover:shadow-xl backdrop-blur-sm p-6 rounded-xl transition-all hover:-translate-y-1 duration-300"
+              className="group relative bg-white/90 shadow-lg hover:shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 p-8"
             >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="mb-3 font-semibold text-xl">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-              <div className="top-0 left-0 -z-10 absolute bg-gradient-to-br from-transparent via-transparent to-blue-100/30 opacity-0 group-hover:opacity-100 rounded-xl w-full h-full transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+              
+              {/* Icon with gradient background */}
+              <div className="relative mb-6 w-16 h-16 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {React.cloneElement(service.icon, {
+                  className: "relative z-10 w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+                })}
+              </div>
+              
+              <h3 className="mb-3 font-bold text-xl text-gray-800">{service.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+              
+              {/* Hover effect border */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
 
-        {/* Contact CTA */}
-        <div className="relative bg-white/80 shadow-lg backdrop-blur-sm mt-20 p-10 rounded-2xl overflow-hidden text-center">
-          <div className="top-0 right-0 -z-10 absolute bg-yellow-300/30 blur-3xl rounded-full w-64 h-64" />
-          <div className="bottom-0 left-0 -z-10 absolute bg-blue-300/30 blur-3xl rounded-full w-64 h-64" />
-          <h2 className="mb-4 font-bold text-3xl">Ready to Start Your Project?</h2>
-          <p className="mb-8 text-gray-700 text-xl">Let's collaborate to bring your ideas to life!</p>
-          <Link href={'/contact'}>
-            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
+        {/* Contact CTA Section */}
+        <div className="relative mt-20 p-10 rounded-2xl overflow-hidden text-center bg-gradient-to-r from-indigo-500 to-purple-600">
+          <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-center bg-no-repeat opacity-5"></div>
+          
+          <h2 className="mb-4 font-bold text-3xl text-white">Ready to Start Your Project?</h2>
+          <p className="mb-8 text-indigo-100 text-xl max-w-2xl mx-auto">
+            Let's collaborate to transform your ideas into exceptional digital experiences.
+          </p>
+          
+          <Link href="/contact">
+            <button className="relative z-10 bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
               Get in Touch
             </button>
           </Link>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-400/20 rounded-full blur-2xl"></div>
         </div>
       </div>
     </div>

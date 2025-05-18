@@ -21,6 +21,9 @@ export const metadata = {
   other: {
     "google-site-verification": "your-google-verification-code",
   },
+  icons: {
+    icon: './logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -38,7 +41,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Destiny's Full-Stack Web Development Portfolio" />
         <meta property="og:description" content="Explore my portfolio of web applications and discover my skills in JavaScript, Node.js, React, and more." />
         <meta property="og:image" content="https://example.com/og-image.jpg" />
-        <meta property="og:url" content="https://portfolioemo.vercel.app" />
+        <meta property="og:url" content="https://mbahmukong-destiny.vercel.app" />
         <meta property="og:site_name" content="Destiny's Web Development Portfolio" /> 
 
         {/* Schema.org for Google (structured data) */}
@@ -48,7 +51,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Mbahmukong Destiny",
-              "url": "https://portfolioemo.vercel.app",
+              "url": "https://mbahmukong-destiny.vercel.app",
               "description": "I am a full-stack web developer specializing in JavaScript, React, Node.js, and web development applications.",
             }
           `}

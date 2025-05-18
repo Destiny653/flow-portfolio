@@ -63,6 +63,14 @@ export default function Projects() {
       githubUrl: "https://github.com/Destiny653/Weather-card-anim.git",
     },
     {
+      title: "Marketplace",
+      description: "A marketplace platform for buying and selling multi products with user reviews.",
+      technologies: ["Next.js", "Supabase", "Tailwind CSS", "Stripe", "Shadcn"],
+      imageUrl: "/images/marketplace.png",
+      liveUrl: "https://marketplace-five-gold.vercel.app/",
+      githubUrl: "https://github.com/Destiny653/marketplace.git",
+    },
+    {
       title: "Domain.com",
       description: "An HTML CSS domain .com web practice, first project execution.",
       technologies: ["HTML", "JavaScript", "CSS"],
@@ -71,7 +79,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Destiny653/Domain.com.git",
     }, 
     {
-      title: "Custom Dashboard",
+      title: "A complete E-commerce application with dashboard",
       description: "A custom dashboard with both UI/UX interface and interactive features.",
       technologies: ["React", "NestJs", "Tailwind CSS", "Vite", "Shadcn", "Tanstack Query", "MongoDB"],
       imageUrl: "/images/dashboard.png",
@@ -80,61 +88,92 @@ export default function Projects() {
     },
 
   ];
-
   return (
     <div className="bg-white/65 px-4 py-20 w-full min-h-screen">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */}
-        <div className="relative flex flex-col justify-center items-center mb-16 h-[400px] text-center">
-          {/* Soft Gradient Background Blurs */}
-          <div className="-z-10 absolute inset-0 bg-gradient-to-r from-purple-400/40 via-pink-300/40 to-yellow-300/40 opacity-70 blur-3xl rounded-3xl" />
-
-          <div className="top-0 right-1/4 -z-10 absolute bg-purple-500/40 blur-[120px] rounded-full w-40 h-40" />
-          <div className="top-10 left-1/4 -z-10 absolute bg-yellow-500/40 blur-[120px] rounded-full w-40 h-40" />
-
-          {/* Main Content */}
-          <h1 className="drop-shadow-lg mb-6 font-extrabold text-white text-6xl">My Projects</h1>
-
-          <p className="mx-auto max-w-2xl text-gray-700 text-xl leading-relaxed">
-            Showcasing my latest web development projects and applications.
-            Each project represents a unique challenge and solution.
-          </p>
+        {/* Enhanced Hero Section */}
+        <div className="relative isolate overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-900 rounded-3xl mb-16 h-[500px] flex flex-col justify-center items-center text-center">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+          </div>
+          
+          {/* Floating logo */}
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
+          
+          {/* Content container */}
+          <div className="relative z-10 px-6">
+            {/* Your logo */}
+            <div className="mx-auto mb-8 w-32 h-32 relative">
+              <Image 
+                src="/images/logo.png" 
+                alt="Your Logo" 
+                fill 
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+              My <span className="text-purple-300">Projects</span>
+            </h1>
+            
+            <p className="mx-auto max-w-2xl text-lg text-purple-100 leading-relaxed">
+              Showcasing innovative solutions and cutting-edge web applications.
+              Each project represents unique challenges and creative solutions.
+            </p>
+            
+            {/* Animated scroll indicator */}
+            <div className="mt-12 animate-bounce">
+              <svg className="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </div>
+          </div>
         </div>
 
-
-        {/* Projects Grid - Modified to 3 columns */}
+        {/* Projects Grid */}
         <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white/80 shadow-lg hover:shadow-xl backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300"
+              className="group relative bg-white/90 shadow-lg hover:shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="relative w-full h-48">
+              {/* Project image with overlay */}
+              <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
+              
+              {/* Project content */}
               <div className="p-6">
-                <h3 className="mb-3 font-semibold text-xl">{project.title}</h3>
+                <h3 className="mb-3 font-bold text-xl text-gray-800">{project.title}</h3>
                 <p className="mb-4 text-gray-600 text-sm">{project.description}</p>
+                
+                {/* Tech badges */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-100 px-3 py-1 rounded-full text-blue-600 text-xs"
+                      className="bg-blue-100 px-3 py-1 rounded-full text-blue-600 text-xs font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+                
+                {/* Action buttons */}
                 <div className="flex gap-4">
                   <a
                     href={project.liveUrl}
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm"
+                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -143,7 +182,7 @@ export default function Projects() {
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="flex items-center gap-2 text-gray-700 hover:text-gray-900 text-sm"
+                    className="flex items-center gap-2 text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -156,17 +195,24 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Contact Section */}
-        <div className="relative bg-white/80 shadow-lg backdrop-blur-sm mt-20 p-10 rounded-2xl overflow-hidden text-center">
-          <div className="top-0 right-0 -z-10 absolute bg-green-300/30 blur-3xl rounded-full w-64 h-64" />
-          <div className="bottom-0 left-0 -z-10 absolute bg-pink-300/30 blur-3xl rounded-full w-64 h-64" />
-          <h2 className="mb-4 font-bold text-3xl">Interested in Working Together?</h2>
-          <p className="mb-8 text-gray-700 text-xl">I'm always open to discussing new projects and opportunities.</p>
-          <Link href={'/contact'}>
-            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-white transition-colors">
+        {/* Contact CTA Section */}
+        <div className="relative mt-20 p-10 rounded-2xl overflow-hidden text-center bg-gradient-to-r from-indigo-500 to-purple-600">
+          <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-center bg-no-repeat opacity-5"></div>
+          
+          <h2 className="mb-4 font-bold text-3xl text-white">Let's Build Something Amazing</h2>
+          <p className="mb-8 text-indigo-100 text-xl max-w-2xl mx-auto">
+            I'm passionate about creating exceptional digital experiences. Reach out to discuss your next project.
+          </p>
+          
+          <Link href="/contact">
+            <button className="relative z-10 bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
               Contact Me
             </button>
           </Link>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-400/20 rounded-full blur-2xl"></div>
         </div>
       </div>
     </div>
